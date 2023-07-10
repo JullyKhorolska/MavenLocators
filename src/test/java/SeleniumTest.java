@@ -18,8 +18,8 @@ public class SeleniumTest {
     public static void initNameAndPassword (){
         login = new Login("tomsmith", "SuperSecretPassword!","helloWord!", "https://www.google.com/");
     }
-    @BeforeAll
-    public static void openStartPage () throws InterruptedException {
+    @BeforeEach
+    public void openStartPage () throws InterruptedException {
         chromeDriver.get(login.getUrl());
         Thread.sleep(5000);
     }
